@@ -77,7 +77,7 @@ This api sends the SMS to the first API if the first API can't handle then the s
 For seeing the report page use:
 
 ```
-localhost:8000/digi/src/View
+localhost/digi/src/View
 ```
 
 **Important note:** to use the report page you have to Enable `Cross-Origin Resource Sharing` in your browser and Server `.conf` files. for example in Chrome you can download `Allow-Control-Allow-Origin: *` extension or use [this link](https://enable-cors.org/).
