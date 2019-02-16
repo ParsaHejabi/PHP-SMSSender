@@ -1,0 +1,6 @@
+send_sms:
+    path: /sms/send
+    controller: App\Controller\SmsController::send
+reports:
+    path: /sms/reports
+    controller: App\Controller\ReportController::index

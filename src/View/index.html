@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body onload="httpGetAsync('http://localhost:8000/sms/reports', '');">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div id="search-form-container">
+                <form class="form-inline">
+                    <label for="numberInput">Search by number in the correct format ("9891--------"):</label>
+                    <div class="form-group">
+                        <input class="form-control mr-sm-2" id="numberInput" type="number" name="number" onkeyup="httpGetAsync('http://localhost:8000/sms/reports', this.value)">
+                    </div>
+                    <!-- <input type="submit" value="Search" class="btn btn-primary mr-sm-2"> -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>Text messages status:</h2>
+            <div id="main-table-container">
+                <table class="table table-bordered table-hover table-striped" id="main-table">
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Top ten numbers:</h3>
+            <table class="table table-bordered table-hover" id="additional-table">
+            </table>
+        </div>
+        <div class="col">
+            <div id="additional-container">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
