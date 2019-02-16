@@ -31,18 +31,19 @@ extension=amqp
 ```
 
 4- Download and install [Composer](https://getcomposer.org/).
-5- Go to the project directory and customize `DATABASE_URL` in `.env` file. `db_user` and `db_password` have to be changed to your database username and password.
+5- Create `digi` folder in `C:/xampp/htdocs/` and clone the repository in there.
+6- Go to the project directory and customize `DATABASE_URL` in `.env` file. `db_user` and `db_password` have to be changed to your database username and password.
 ```
 # customize this line!
 DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/digi"
 ```
-6- In terminal enter these commands:
+7- In terminal enter these commands:
 ```
 composer install
 php bin/console doctrine:database:create
 php bin/console doctrine:migrations:migrate
 ```
-7- To run the project first open XAMPP and start Apache and MySQL and then enter 2 terminal sessions:
+8- To run the project first open XAMPP and start Apache and MySQL and then enter 2 terminal sessions:
 ```
 # terminal 1:
 php bin/console server:run
@@ -61,4 +62,4 @@ and for seeing the report page use:
 ```
 localhost:8000/digi/src/View
 ```
-**Important note:** to use the report page you have to Enable `Cross-Origin Resource Sharing` in your browser. for example in Chrome you can download `Allow-Control-Allow-Origin: *` extension or use [this link](https://enable-cors.org/).
+**Important note:** to use the report page you have to Enable `Cross-Origin Resource Sharing` in your browser and Server `.conf` files. for example in Chrome you can download `Allow-Control-Allow-Origin: *` extension or use [this link](https://enable-cors.org/).
